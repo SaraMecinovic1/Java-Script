@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(226, 190, 146);
+}
+#slika{
+    width: 300px;
+    height: 300px;
+    border: 1px solid palevioletred;
+    
+
+}
+.prvi{
+    text-align: center;
+padding-top: 100px;
+font-size: 30px;
+color: black;
+}
+button{
+    width: 70px;
+    height: 30px;
+    margin: 10px;
+    background-color: palevioletred;
+   border: 1px solid rgb(228, 79, 128);
+   
+}
