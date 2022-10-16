@@ -1,0 +1,197 @@
+body{
+   
+}
+.kalkulator{
+    border: 1px solid gray;
+    width: 320px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.rezultat{
+    border: 1px solid gray;
+    width: 320px;
+    height: 80px;
+   
+}
+.operacije{
+    
+    width: 320px;
+    height: 50px;
+    margin-top: 10px;
+    
+}
+#plus{
+    width: 70px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(179, 178, 178);
+    margin-right: 10px;
+}
+#minus{
+    width: 70px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color:rgb(179, 178, 178) ;
+    
+    margin-right: 10px;
+}
+#puta{
+    width: 70px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(179, 178, 178);
+    margin-right: 10px;
+}
+#podeljeno{
+    width: 68px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(179, 178, 178);
+   
+}
+.sve{
+    width: 100%;
+    height: 100%;
+    
+    margin-top: 10px;
+    display: flex;
+}
+.brojevi{
+    width: 74%;
+    height: 100%;
+    
+    margin-right: 13px;
+    display: flex;
+    flex-direction: column;
+}
+.jednako{
+    width: 21%;
+    height: 48%;
+    background-color: rgb(36, 140, 238);
+    border: 1px solid rgb(36, 140, 238);
+    text-align: center;
+    padding-top: 120px;
+    font-size: 20px;
+}
+.red1{
+    width: 100%;
+    height: 50px;
+    
+    margin-bottom: 20px;
+    display: flex;
+    
+}
+#sedam{
+    width: 68px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color:rgb(228, 228, 228);
+    margin-right: 10px;
+}
+#osam{
+    width: 70px;
+    margin-left: 4px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(228, 228, 228);
+    margin-right: 10px;
+}
+#devet{
+    width: 70px;
+    height: 50px;
+    margin-left: 4px;
+    border: 1px solid gray;
+    background-color: rgb(228, 228, 228);
+    
+}
+.red2{
+    width: 100%;
+    height: 50px;
+    
+    margin-bottom: 20px;
+    display: flex;
+}
+#cetiri{
+    width: 68px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color:rgb(228, 228, 228);
+    margin-right: 10px;
+}
+#pet{
+    width: 70px;
+    margin-left: 4px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(228, 228, 228);
+    margin-right: 10px;
+}
+#sest{
+    width: 70px;
+    height: 50px;
+    margin-left: 4px;
+    border: 1px solid gray;
+    background-color: rgb(228, 228, 228);
+    
+}
+.red3{
+    width: 100%;
+    height: 50px;
+    
+    margin-bottom: 20px;
+    display: flex;
+}
+#jedan{
+    width: 68px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color:rgb(228, 228, 228);
+    margin-right: 10px;
+}
+#dva{
+    width: 70px;
+    margin-left: 4px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(228, 228, 228);
+    margin-right: 10px;
+}
+#tri{
+    width: 70px;
+    height: 50px;
+    margin-left: 4px;
+    border: 1px solid gray;
+    background-color: rgb(228, 228, 228);
+    
+}
+.red4{
+    width: 100%;
+    height: 62px;
+    
+    display: flex;
+}
+#nula{
+    width: 68px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color:rgb(228, 228, 228);
+    margin-right: 10px;
+}
+#tacka{
+    width: 70px;
+    margin-left: 4px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(228, 228, 228);
+    margin-right: 10px;
+}
+#ce{
+    width: 70px;
+    height: 50px;
+    margin-left: 4px;
+    border: 1px solid gray;
+    background-color: rgb(228, 228, 228);
+    
+}
