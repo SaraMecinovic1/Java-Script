@@ -9,7 +9,7 @@ body{
     flex-direction: column;
     padding: 15px;
 }
-.rezultat{
+.result{
     border: 1px solid gray;
     width: 320px;
     height: 80px;
