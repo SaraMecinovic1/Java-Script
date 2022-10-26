@@ -1,0 +1,41 @@
+body{
+    /* background-color: liner-gradient(rgb(247, 36, 36), rgb(245, 245, 131)); */
+    background-color: rgb(219, 219, 93);
+}
+.numbers{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 150px;
+}
+#num1{
+    margin: 20px;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+#num2{
+    margin: 20px;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+.press{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 60px;
+    text-align: center;
+    
+}
+#btn{
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    border-radius: 7px;
+    border: 1px solid red;
+}

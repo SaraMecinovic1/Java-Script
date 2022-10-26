@@ -15,6 +15,10 @@ body {
   border-radius: 7px;
   margin-top: 100px;
 }
+img{
+  width: 23px;
+  height: 20px;
+}
 h2 {
   padding-bottom: 0px;
   height: 22px;
@@ -25,6 +29,12 @@ h4{
     margin-left: 10px;
     
 }
+.inp{
+  display: flex;
+}
+button{
+text-decoration: none;
+}
 input {
   width: 230px;
   height: 30px;
@@ -32,6 +42,8 @@ input {
   padding-left: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
+  display: flex;
+  
 }
 .red {
   width: 90%;

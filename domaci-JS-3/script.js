@@ -1,15 +1,34 @@
-document.getElementById("plus").addEventListener("click", function (){
-    var list = document.getElementById("list");
+var num = 0;
+function addNewListItem() {
+    document.getElementById("list");
+    document.getElementById("Taskname").value;
 
-var taskName = document.getElementById("input1").value;
-var listItem = document.createElement("button");
-listItem.className = "list-items";
-listItem.textContent = taskName;
-var taskName = document.getElementById("input1").value = "";
+    var listItem = document.createElement("sve");
+    listItem.classNamen = "red";
+    listItem.textContent = Taskname ;
 
-list.appendChild("listItem");
+    list.appendChild(listItem);
+
+     num++ ;
+     document.getElementById("TaskName").value = "";
+document.getElementById("numberOfItems").textContent = num;
+}
+document.getElementById("add").addEventListener("click", function(){
+    addNewListItem();
 });
 
-document.getElementById("taskName").addEventListener("keydown", function(event) {
-console.log("EVENT === "event.key)
-} )
+document.getElementById("btn").addEventListener("click", function(){
+    var list = document.getElementById("list");
+    list.innerHTML = "";
+
+    num = 0;
+    document.getElementById("numberOfItems").textContent = num;
+});
+
+document.getElementById("TaskName")
+.addEventListener("keydown", function (event) { 
+    if (event.key === "Enter"){
+        addNewListItem();
+    }
+    });
+   
