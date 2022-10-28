@@ -39,3 +39,10 @@ body{
     border-radius: 7px;
     border: 1px solid red;
 }
+#result{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin-left: 380px;
+    margin-top: 50px;
+}

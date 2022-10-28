@@ -10,9 +10,9 @@ document.getElementById("btn").addEventListener("click", function () {
     } else if (i % 5 == 0) {
       console.log([i], "buzz");
     }
-    document.getElementById("result").innerHTML;
+    // document.getElementById("result").textContent;
   }
-  
+  // FOR LOOP ZA KORISCENJE ODREDJENIH
 });
 
 // document.getElementById("btn").addEventListener("click", function () {
