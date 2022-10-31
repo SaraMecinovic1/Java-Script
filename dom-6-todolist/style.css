@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(187, 236, 113);
+}
+
+.todo-box{
+border: 1px solid black;
+height: 350px;
+width: 300px;
+padding: 10px;
+margin-left: 450px;
+margin-top: 150px;
+border-radius: 5px;
+background-color: gainsboro;
+}
+.title{
+text-align: center;
+}
+input{
+width: 250px;
+height: 30px;
+font-size: 15px;
+}
+.btnn1{
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+
+}
+.footerr{
+    width: 100%;
+   margin-top: 30px;
+   margin-left: 90px;
+}
+.btnn2{
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
+#btnn3{
+    color: red;
+}
+#list{
+    border: 1px solid grey;
+    width: 97%;
+    height: 30px;
+   display: flex;
+   align-items: center;
+   margin-top: 10px;
+   font-size: 20px;
+}
