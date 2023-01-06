@@ -16,7 +16,7 @@ console.log(sortByLength(arr));
 
 /////////////////////////////////////////////////////////////////////////
 
-function dontGiveFiveMeFive(start, end) { ?
+function dontGiveFiveMeFive(start, end) { 
   brojac = 0;
 
   for (var i = start; i <= end; i++) {
@@ -33,7 +33,7 @@ console.log(dontGiveFiveMeFive(start, end));
 ////////////////////////////////////////////////////////////////////////
 
 arr = [1, 2, 3, 4, 5];
-function min(arr, toReturn) { ?
+function min(arr, toReturn) { 
   var mini = arr[0];
 
   for (var i = 1; i <= arr.length - 1; i++) {

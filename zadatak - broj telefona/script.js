@@ -1,27 +1,23 @@
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
 function createPhoneNumber(arr) {
   var phoneNumber = "";
-  for (var i = 0; i <= arr.length - 1; i++) {
-    if(i === 0){
-        phoneNumber = phoneNumber + "("
+  arr.forEach(function (item, index) {
+    if (index === 0) {
+      phoneNumber = phoneNumber + "(";
     }
-
-    phoneNumber = phoneNumber + arr[i];
-
-    if(i === 2){
-        phoneNumber = phoneNumber + ") "
+    phoneNumber = phoneNumber + item;
+    if (index === 2) {
+      phoneNumber = phoneNumber + ")";
     }
-    if (i === 5){
-        phoneNumber = phoneNumber + "-"
+    if (index === 5) {
+      phoneNumber = phoneNumber + "-";
     }
-
-  }
-  return phoneNumber
+    return item;
+  });
+  return phoneNumber;
 }
-
 console.log(createPhoneNumber(arr));
-
-
 
 // arr=([2, 3, 1])
 // function middleNumber (arr){
@@ -34,7 +30,7 @@ console.log(createPhoneNumber(arr));
 //         return 1;
 //     }
 //     if(num === undefined){
-//         return num 
+//         return num
 //     }
 // }
 // console.log(middleNumber (arr));

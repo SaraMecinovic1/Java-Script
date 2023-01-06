@@ -27,19 +27,21 @@ function renderAllGrades() {
   
   var list = document.getElementById("listOfGrades");   // ucitamo parent html (getElementById)
 
-  for (var i = 0; i <= grades.length - 1; i++) {
-    var listItem = document.createElement("li");   // napravimo html element - list item (createElement)
-    listItem.textContent = grades[i].num + " - " + grades[i].subject;  // dodajemo u novonapravljeni element informacije o oceni (.textContent = ocena)
-    list.appendChild(listItem);   // appendujemo taj napravljeni html element u parent html elemet
+  grades.forEach(function(item){
+    
+      var listItem = document.createElement("li");   // napravimo html element - list item (createElement)
+      listItem.textContent = item.num + " - " + item.subject;  // dodajemo u novonapravljeni element informacije o oceni (.textContent = ocena)
+      list.appendChild(listItem);   // appendujemo taj napravljeni html element u parent html elemet
+    
   }
+  ) 
 }
-
 //////////////////////////////////////////////////////////////////////////////////
 
 function calcuateSumOfGrades() {
   var sum = 0;
-  for (var i = 0; i <= grades.length - 1; i++) {
-    sum = sum + grades[i].num;
+  for (var firstOfGrades of grades) {
+    sum = sum + firstOfGrade.num;
   }
   return sum;
 }
@@ -118,4 +120,4 @@ var user = {
 // var grade = {
 //   num: 4,
 //   subject: "Matematika",
-// };
+// 
