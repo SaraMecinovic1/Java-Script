@@ -21,3 +21,4 @@ while(text.length <100){
     text=text + "Sara"
 }
 console.log(text);
+

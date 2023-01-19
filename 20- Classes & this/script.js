@@ -79,3 +79,5 @@ var MojAuto=new Auto("bmw", 2018,5,"sport",220);
 
 console.log( "Pre ubrzanja", MojAuto.trenutnabrzina)
 console.log( "Posle ubrzanja", MojAuto.ubrzanje())
+
+//da kreiramo objekte 
