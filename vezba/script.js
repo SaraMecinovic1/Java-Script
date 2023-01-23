@@ -82,3 +82,85 @@ else{
     console.log("Please select payment!");
 }
 });
+
+
+///////////////////////////////////////////////////////////////////////////////
+                        //zamena brojeva 
+var num = 3432;
+function replacementNum(){
+    return num.toString().split("").reverse().join("")
+}
+replacementNum()
+console.log(replacementNum())
+
+
+/////////////////////////////////////////////////////////////////////////////////
+                              //prvo slovo veliko
+function toUpperLetter(arr){
+    arr = "sara is good"
+  var up = arr.charAt(0).toUpperCase() + arr.slice(1);
+  return up;
+}
+console.log(toUpperLetter());
+
+//////////////////////////////////////////////////////////
+// function longest(){
+//     var str= "Web development is a good paid"
+//     var strsplit=str.split(" ");
+//     var largest = "";
+    
+//     for(i=0;i<=strsplit.length;i++){
+//         if(strsplit[i].length>largest){
+//             largest=strsplit[i].length
+//         }
+//         return largest;
+//     }
+// }
+// console.log(longest())
+
+
+// function findLongestWord(str) {
+//     var strSplit = str.split(' ');
+//     var longestWord = 0;
+//     for(var i = 0; i < strSplit.length; i++){
+//       if(strSplit[i].length > longestWord){
+//       longestWord = strSplit[i].length;
+//        }                                             //ne radi
+//     }
+//     return longestWord;
+//   }
+//   findLongestWord("The quick brown fox jumped over the lazy dog");
+
+//   console.log(findLongestWord())
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+           //da izbroji koiko samoglasniam ima u recenici
+
+ 
+//  function samoglasnici(){
+//     var story = "uspavana lepotica"
+//     var suma=0;
+//     var includesLetter= story.split("")
+//     for(i=1;i<=story.length-1;i++){
+        
+//         if(story[i].includes("a"||"e"||"o"||"i"||"u")){
+//             return suma++
+//         }
+        
+//     }
+//  }    
+//  console.log(samoglasnici())  
+ 
+ 
+ var story = "uspavana lepotica"
+ var includesLetter= story.split("")
+ console.log(includesLetter)
+
+ function samoglasnci(){
+    var story = "uspavana lepotica"
+ var includesLetter= story.split("")
+    var suma =0;
+
+ }
