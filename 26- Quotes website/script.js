@@ -3,13 +3,26 @@
 var quotes = []; //svi idu tu
 var allQuotes = [];
 
+function likeQuotes(){
+  fetch
+}
 function renderQuotes() {
+  //kreiramo parent i child
   var parent = "";
   var parent = document.getElementById("list");
   quotes.forEach(function (item, index) {
     var child = document.createElement("li");
-    child.textContent = item.quoteText + " -" + item.quoteAuthor;
+    var quoteTextEl = document.createElement("p");
+    var quoteLikesEl = document.createElement("p");
+    var like = document.createElement("img");
+    child.textContent =
+      item.quoteText + " -" + item.quoteAuthor + "<br>likes" + item.likes;
     parent.appendChild(child);
+
+    like.src = "heart.png";
+    like.style="width:30px";
+    child.appendChild(quoteTextEl);
+    child.appendChild(quoteLikesEl);
   });
 }
 

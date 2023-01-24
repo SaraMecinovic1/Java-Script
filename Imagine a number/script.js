@@ -24,6 +24,7 @@ setTimeout(function () {
       }, 2000);
 },1000)
 
+
 //////////////////////
 
 document.getElementById("iGiveYou").style.display = "none";
@@ -35,25 +36,27 @@ setTimeout(function () {
 }, 5000);
 
 //////////////////////
-document.getElementById("friendMoney").style.display = "block";
+document.getElementById("friendMoney").style.display = "none";
 
 setTimeout(function(){
     setTimeout(function () {
-        document.getElementById("friendMoney").style.display = "none";
+        document.getElementById("friendMoney").style.display = "block";
       }, 2000);
-},3000)
-setTimeout(function () {
-  document.getElementById("friendMoney").style.display = "none";
-}, 2000);
-///////////////////////
-document.getElementById("throw").style.display = "block";
+},7000);
 
-setTimeout(function () {
-  document.getElementById("throw").style.display = "none";
-}, 2000);
 ///////////////////////
-document.getElementById("myMoney").style.display = "block";
+document.getElementById("throw").style.display = "none";
 
-setTimeout(function () {
-  document.getElementById("myMoney").style.display = "none";
-}, 2000);
+setTimeout(function(){
+  setTimeout(function () {
+    document.getElementById("throw").style.display = "block";
+  }, 2000);
+},1000 * 10);
+///////////////////////
+document.getElementById("myMoney").style.display = "none";
+
+setTimeout(function(){
+  setTimeout(function () {
+    document.getElementById("myMoney").style.display = "block";
+  }, 2000);
+},1000 *13)

@@ -1,5 +1,5 @@
 // // !== (razlicit)
-// //prevu nmg da nadjem
+// //privju nmg da nadjem
 
 
 
@@ -28,7 +28,7 @@ document.getElementById("addnew").addEventListener("click", function () {
     .then(function (res) {
       return res.json();
     })
-    .then(function (data) {
+    .then(function (data) {                               //then-sta ce dalje da se desi sa rezultatom:
       document.getElementById("quoteText").value="";
       document.getElementById("quoteAuthor").value="";
       document.getElementById("quoteSource").value="";
@@ -37,6 +37,6 @@ document.getElementById("addnew").addEventListener("click", function () {
     });
 
 
-    document.getElementById("poruka").innerHTML = "Go to the page: http://127.0.0.1:5500/26-%20Quotes%20website/index.html  to view quotes!"
+    document.getElementById("poruka").innerHTML = "Go to the page: http://127.0.0.1:5500/26-%20Quotes%20website/index.html  to view all quotes!"
 });
 
