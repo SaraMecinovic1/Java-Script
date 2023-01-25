@@ -34,28 +34,28 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
- var fullName= "Sara Mecinovic";
-var firstName;
-var lastName;
+//  var fullName= "Sara Mecinovic";
+// var firstName;
+// var lastName;
 
-firstName=fullName.slice(0,4); //od pocetnog index da kraja imena
-lastName=fullName.slice(5);
-console.log(firstName);
-console.log(lastName);
+// firstName=fullName.slice(0,4); //od pocetnog index da kraja imena
+// lastName=fullName.slice(5);
+// console.log(firstName);
+// console.log(lastName);
 
-     var ime="sara";
-     var upp = ime.charAt(0).toUpperCase()
-     console.log(upp);
+//      var ime="sara";
+//      var upp = ime.charAt(0).toUpperCase()
+//      console.log(upp);
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-var brojevi = [2,4,6,7,4,8,9,55,87];
+// var brojevi = [2,4,6,7,4,8,9,55,87];
 
-var evenNum=brojevi.filter(function(el,index){
-    if(el%2===0){
-        return el
-    }
-})
+// var evenNum=brojevi.filter(function(el,index){
+//     if(el%2===0){
+//         return el
+//     }
+// })
 
 
 
@@ -64,44 +64,44 @@ var evenNum=brojevi.filter(function(el,index){
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-document.getElementById("checkBtn").addEventListener("click", function (){
-var visa = document.getElementById("visa");
-var mastercard= document.getElementById("master");
-var paypal= document.getElementById("pal");
+// document.getElementById("checkBtn").addEventListener("click", function (){
+// var visa = document.getElementById("visa");
+// var mastercard= document.getElementById("master");
+// var paypal= document.getElementById("pal");
 
-if(visa.checked){
-    document.getElementById("lblVisa").style.color="red";
-}
-else if(mastercard.checked){
-    document.getElementById("lblMaster").style.color="blue";
-}
-else if(paypal.checked){
-    document.getElementById("lblPay").style.color="pink";
-}
-else{
-    console.log("Please select payment!");
-}
-});
+// if(visa.checked){
+//     document.getElementById("lblVisa").style.color="red";
+// }
+// else if(mastercard.checked){
+//     document.getElementById("lblMaster").style.color="blue";
+// }
+// else if(paypal.checked){
+//     document.getElementById("lblPay").style.color="pink";
+// }
+// else{
+//     console.log("Please select payment!");
+// }
+// });
 
 
 ///////////////////////////////////////////////////////////////////////////////
                         //zamena brojeva 
-var num = 3432;
-function replacementNum(){
-    return num.toString().split("").reverse().join("")
-}
-replacementNum()
-console.log(replacementNum())
+// var num = 3432;
+// function replacementNum(){
+//     return num.toString().split("").reverse().join("")
+// }
+// replacementNum()
+// console.log(replacementNum())
 
 
 /////////////////////////////////////////////////////////////////////////////////
                               //prvo slovo veliko
-function toUpperLetter(arr){
-    arr = "sara is good"
-  var up = arr.charAt(0).toUpperCase() + arr.slice(1);
-  return up;
-}
-console.log(toUpperLetter());
+// function toUpperLetter(arr){
+//     arr = "sara is good"
+//   var up = arr.charAt(0).toUpperCase() + arr.slice(1);
+//   return up;
+// }
+// console.log(toUpperLetter());
 
 //////////////////////////////////////////////////////////
 // function longest(){
@@ -154,13 +154,24 @@ console.log(toUpperLetter());
 //  console.log(samoglasnici())  
  
  
- var story = "uspavana lepotica"
- var includesLetter= story.split("")
- console.log(includesLetter)
+ 
 
- function samoglasnci(){
-    var story = "uspavana lepotica"
- var includesLetter= story.split("")
-    var suma =0;
+ 
+ //////////////////////////////////////////////////////////
 
- }
+ var randomNum= Math.floor(Math.random * 10+1);
+ var guess = 0;
+ document.getElementById("guessBtn").addEventListener("click",function(){
+   
+    var inputNum= document.getElementById("guessInp").value;
+    guess+=1;
+    if(inputNum===randomNum){
+        alert("Pogodili ste broj!")
+    }else if(inputNum <randomNum){
+        alert("Manji je od tvog broja")
+    }else{
+        alert("Veci je od tvog broja")
+    }
+    
+ });
+

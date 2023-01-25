@@ -12,7 +12,7 @@ for (let i = 2; i < 10; i++) {
 
 console.log(randomNum);
 document.getElementById("randomNum").innerHTML =
-  " 3. Tvoj prijatelj ti da jos: " + randomNum;
+  " 3. Tvoj prijatelj ti da jos: " + randomNum ;
 
 //   alert("repseuj za novi random broj");
 

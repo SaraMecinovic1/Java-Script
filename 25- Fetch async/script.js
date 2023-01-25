@@ -38,6 +38,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/100")
 // default method = GET
 // other methods: POST, PUT, PATCH, DELETE
 
+// GET-uvek sadzi metod..,
 fetch("https://jsonplaceholder.typicode.com/posts", {
 method: "POST", // za kreiranje novih resursa
 body: JSON.stringify({  //  pretvara objekat isto u objekat stringify  ( cuvamo u bazi podataka )
@@ -72,5 +73,5 @@ headers: {
 // npr: if(age ===" ").throw "Polje je prazno")
 
 //Metoda then() vraća Promise. Potrebna su dva argumenta: funkcije povratnog poziva za slučajeve uspeha i
-// neuspeha obećanja. Objekat Promise se koristi za odložena i asinhrona izračunavanja.
+// neuspeha obećanja(RES I ERR). Objekat Promise se koristi za odložena i asinhrona izračunavanja.
 // Obećanje predstavlja operaciju koja još nije završena, ali se očekuje u budućnosti.
