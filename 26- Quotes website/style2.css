@@ -24,7 +24,7 @@
   
   .list li {
     display: block;
-    height: 50px;
+    height: 130px;
     width: 600px;
     list-style-type: none;
     background-color: rgb(18, 55, 18);
@@ -60,3 +60,4 @@ padding-left: 10px;
     background-color: gainsboro;
     color: gray;
   } */
+  

@@ -1,4 +1,13 @@
 //ruta-to sto gadjamo (link)
+//GET- za preuzimanje podataka sa servera(vraca sve informacije sa servera)
+//POST- salje podatke serveru i kreira nove podatke
+//PUT- slizi za azuriranje postojecih podataka(sve)
+//PATCH- (slicno PUT)ne azurira sve nego odredjene podatke li samo 1 podatak.
+
+
+
+
+
 
 var quotes = []; //svi idu tu
 var allQuotes = [];
@@ -30,9 +39,10 @@ function renderQuotes() {
     var like = document.createElement("img");
     var deleteEl = document.createElement("img");
 
-    child.textContent =
-      item.quoteText + " -" + item.quoteAuthor ;
-      quoteLikesEl.textContent="Likes:" + item.like;
+    quoteTextEl.textContent =
+      item.quoteText + " -" + item.quoteAuthor;
+      
+      quoteLikesEl.textContent = "Likes:" + item.likes;
     parent.appendChild(child);
 
     like.src = "heart.png";

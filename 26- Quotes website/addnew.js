@@ -40,3 +40,6 @@ document.getElementById("addnew").addEventListener("click", function () {
     document.getElementById("poruka").innerHTML = "Go to the page: http://127.0.0.1:5500/26-%20Quotes%20website/index.html  to view all quotes!"
 });
 
+
+localStorage.setItem("name", "Sara")
+console.log(localStorage.getItem("name"));
