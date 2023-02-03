@@ -1,3 +1,6 @@
+//Metoda map() vraća potpuno novi niz s transformiranim elementima i istom količinom podataka.
+
+
 var grades = [];
 
 var mainSubjects = [

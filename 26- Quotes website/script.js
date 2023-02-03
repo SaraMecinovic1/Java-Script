@@ -1,12 +1,8 @@
 //ruta-to sto gadjamo (link)
 //GET- za preuzimanje podataka sa servera(vraca sve informacije sa servera)
 //POST- salje podatke serveru i kreira nove podatke
-//PUT- slizi za azuriranje postojecih podataka(sve)
+//PUT- sluzi za azuriranje postojecih podataka(sve)
 //PATCH- (slicno PUT)ne azurira sve nego odredjene podatke li samo 1 podatak.
-
-
-
-
 
 
 var quotes = []; //svi idu tu
@@ -23,6 +19,9 @@ function likeQuote(id) {
 function deleteQuote(id){
   fetch("https://js-course-server.onrender.com/quotes/delete/"+ id,{
     method: "DELETE",
+    headers: {
+      Authorization: localStorage.getItem("auth_token"),
+    },
   }).then((response) =>{
     getQuotes();
   });
@@ -34,22 +33,31 @@ function renderQuotes() {
    parent.innerHTML = " ";
   quotes.forEach(function (item, index) {
     var child = document.createElement("li");
-    var quoteTextEl = document.createElement("p");
-    var quoteLikesEl = document.createElement("p");
+
+    var quoteTextEl = document.createElement("p");  //prostor za prikaz citata
+    var quoteLikesEl = document.createElement("p");  //prostor za prikaz lajkova
     var like = document.createElement("img");
     var deleteEl = document.createElement("img");
+    var editEl = document.createElement("img");
 
     quoteTextEl.textContent =
       item.quoteText + " -" + item.quoteAuthor;
-      
+  
       quoteLikesEl.textContent = "Likes:" + item.likes;
-    parent.appendChild(child);
+    
 
     like.src = "heart.png";
     like.style="width:20px";
     like.onclick = function () {
-      likeQuote(item._id);
+      likeQuote(item._id); //OVO!!!
   };
+
+  editEl.src = "edit.png";
+    editEl.style = "width: 20px";
+    editEl.onclick = function () {
+      window.location.href = "edit.html?quoteId=" + item._id;  //sta znaci upitnik i ovo dalje
+    };
+
   deleteEl.src = "remove.png";
     deleteEl.style = "width: 20px";
     deleteEl.onclick = function () {
@@ -58,9 +66,14 @@ function renderQuotes() {
     child.appendChild(quoteTextEl);
     child.appendChild(quoteLikesEl);
     child.appendChild(like);
-    child.appendChild(deleteEl);
+    
+    var authToken = localStorage.getItem("auth_token");
+    if (authToken) {
+      child.appendChild(editEl);
+      child.appendChild(deleteEl);
+    }
 
-    parent.appendChild(child);
+    parent.appendChild(child)
   });
 }
 
@@ -70,9 +83,9 @@ async function getQuotes() {
       return response.json();
     })
     .then(function (response) {
-      quotes = response;
+      quotes = response;  //pretvorili nizove u rezultate 
       allQuotes = response;
-      renderQuotes();
+      renderQuotes();  //child
     })
     .catch(function (err) {
       console.log("err", err);

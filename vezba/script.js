@@ -12,9 +12,7 @@
 //   document.getElementById("bLabel").innerHTML = b;
 // });
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 // var cout = 0
 // document.getElementById("plus").addEventListener("click", function () {
@@ -30,7 +28,6 @@
 //     cout-=1
 //    document.getElementById("num").innerHTML= cout;
 // });
-
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -57,10 +54,7 @@
 //     }
 // })
 
-
-
 //sve sto ne ispunjava uslov otpada(ocisti se niz),ostaje samo sto zadovoljavaju uslov
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -83,9 +77,8 @@
 // }
 // });
 
-
 ///////////////////////////////////////////////////////////////////////////////
-                        //zamena brojeva 
+//zamena brojeva
 // var num = 3432;
 // function replacementNum(){
 //     return num.toString().split("").reverse().join("")
@@ -93,9 +86,8 @@
 // replacementNum()
 // console.log(replacementNum())
 
-
 /////////////////////////////////////////////////////////////////////////////////
-                              //prvo slovo veliko
+//prvo slovo veliko
 // function toUpperLetter(arr){
 //     arr = "sara is good"
 //   var up = arr.charAt(0).toUpperCase() + arr.slice(1);
@@ -108,7 +100,7 @@
 //     var str= "Web development is a good paid"
 //     var strsplit=str.split(" ");
 //     var largest = "";
-    
+
 //     for(i=0;i<=strsplit.length;i++){
 //         if(strsplit[i].length>largest){
 //             largest=strsplit[i].length
@@ -117,7 +109,6 @@
 //     }
 // }
 // console.log(longest())
-
 
 // function findLongestWord(str) {
 //     var strSplit = str.split(' ');
@@ -133,45 +124,140 @@
 
 //   console.log(findLongestWord())
 
+////////////////////////////////////////////////////////////////////////////////
 
-  ////////////////////////////////////////////////////////////////////////////////
+//da izbroji koiko samoglasniam ima u recenici
 
-           //da izbroji koiko samoglasniam ima u recenici
-
- 
 //  function samoglasnici(){
 //     var story = "uspavana lepotica"
 //     var suma=0;
 //     var includesLetter= story.split("")
 //     for(i=1;i<=story.length-1;i++){
-        
+
 //         if(story[i].includes("a"||"e"||"o"||"i"||"u")){
 //             return suma++
 //         }
-        
+
 //     }
-//  }    
-//  console.log(samoglasnici())  
- 
- 
+//  }
+//  console.log(samoglasnici())
+
+//////////////////////////////////////////////////////////
+
+var randomNum = Math.floor(Math.random * 10 + 1);
+var guesses = 0;
+document.getElementById("guessBtn").addEventListener("click", function () {
+  var inputNum = document.getElementById("guessInp").value;
+  guesses += 1;
+  if (inputNum == randomNum) {
+    alert("Pogodili ste broj!");
+  } else if (inputNum < randomNum) {
+    alert("Manji je od tvog broja");
+  } else {
+    alert("Veci je od tvog broja");
+  }
+});
+
+///////////////////////////////////////////////////////////////////
+//  document.getElementById("result").addEventListener("click",function(){
+//     var temp;
+
+//     if(document.getElementById("cBtn").checked){
+//          temp = document.getElementById("tempInp").value;
+//          temp=Number(temp);
+//          temp = toCelsius(temp)
+//         document.getElementById("res").innerHTML= temp + "C";
+//     }
+//     else if(document.getElementById("fBtn").checked){
+//          temp = document.getElementById("tempInp").value;
+//          temp=Number(temp);
+//          temp = toFahre(temp)
+//         document.getElementById("res").innerHTML= temp;
+//     }else{
+//         alert("nesto nije u redu")
+//     }
+//     console.log(temp)
+//  })
+// console.log(temp)
+//  function toCelsius(temp){
+// return (temp-32)*(5/9);
+//  }
+
+//  function toFahre(temp){
+//     return temp * 9/5 + 32
+//  }
+
+//////////////////////////////////////////////////////////////////////////
+
+const students = [
+  {
+    ime: "Sara",
+    prezime: "Mecinovic",
+    ocene: [6, 8, 9, 9, 10],
+    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+  },
+  {
+    ime: "Daris",
+    prezime: "Mecinovic",
+    ocene: [6, 6, 7, 9, 10],
+    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+  },
+  {
+    ime: "Amina",
+    prezime: "Mecinovic",
+    ocene: [8, 6, 9, 9, 10],
+    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+  },
+  {
+    ime: "Faris",
+    prezime: "Mecinovic",
+    ocene: [9, 8, 9, 9, 10],
+    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+  },
+  {
+    ime: "Albin",
+    prezime: "Mecinovic",
+    ocene: [10, 10, 10, 9, 10],
+    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+  },
+  {
+    ime: "Sana",
+    prezime: "Mecinovic",
+    ocene: [9, 8, 9, 6, 8],
+    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+  },
+];
  
 
- 
- //////////////////////////////////////////////////////////
+//map-da uredi vec postojeci niz(dodali prosek) i vrati novi taj niz
+const studentiSaProsekom = students.map((student) => {
+  return {
+    ...student, //kopira sve podatke sa 3 tacke
+    prosek:
+      student.ocene.reduce((prev, curr) => prev + curr, 0) /  student.ocene.length,
+  };
+})
 
- var randomNum= Math.floor(Math.random * 10+1);
- var guess = 0;
- document.getElementById("guessBtn").addEventListener("click",function(){
-   
-    var inputNum= document.getElementById("guessInp").value;
-    guess+=1;
-    if(inputNum===randomNum){
-        alert("Pogodili ste broj!")
-    }else if(inputNum <randomNum){
-        alert("Manji je od tvog broja")
-    }else{
-        alert("Veci je od tvog broja")
-    }
-    
- });
+const filtredStudents = studentiSaProsekom.filter(function (item, index) {
+  return item.prosek > 8;
+});
 
+console.log(studentiSaProsekom ,"Svi proseci");
+console.log(filtredStudents, "filtriran prosek ");
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+const person={
+  name: "Sara",
+  lastName: "Mecinovic",
+  fullName: function(){
+    return this.name + this.lastName;
+  },
+  adress:{
+    city: "Novi pazar",
+
+  }
+
+
+//funk- da vrati nadimak prva dva slova imena i prezime a  }
