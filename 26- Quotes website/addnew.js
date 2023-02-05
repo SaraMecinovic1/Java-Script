@@ -1,12 +1,16 @@
 // // !== (razlicit)
 // //privju nmg da nadjem
+const token = localStorage.getItem("auth_token");
+if (!token) {
+  window.location.href = "index.html";
+}
 
 document.getElementById("addnew").addEventListener("click", function () {
-  var text = document.getElementById("quoteText").value;
-  var author = document.getElementById("quoteAuthor").value;
-  var source = document.getElementById("quoteSource").value;
+  const text = document.getElementById("quoteText").value;
+  const author = document.getElementById("quoteAuthor").value;
+  const source = document.getElementById("quoteSource").value;
 
-  var newQuote = {
+  const newQuote = {
     quoteText: text,
     quoteAuthor: author,
     quoteSource: source,
@@ -23,16 +27,16 @@ document.getElementById("addnew").addEventListener("click", function () {
         "Content-Type": "application/json",
       },
     })
-      .then(function (res) {
+      .then( (res)=> {
         return res.json();
       })
-      .then(function (data) {
+      .then( (data) =>{
         document.getElementById("quoteSource").value = "";
         document.getElementById("quoteText").value = "";
         document.getElementById("quoteAuthor").value = "";
         alert("Vas citat je uspesno dodat");
       })
-      .catch(function (error) {
+      .catch( (error) =>{
         console.log("error:", error);
       });
   } else {
