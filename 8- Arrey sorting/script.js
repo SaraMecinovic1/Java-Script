@@ -45,15 +45,15 @@ document.getElementById("sortDESC").addEventListener("click", function () {
   console.log(arr);
 });
 
-// NACI NAJVECI BROJ U NIZU
-//   var max;
-//   max = arr[0];
-//   for (var i = 1; i <= arr.length - 1; i++) {
-//     if (arr[i] > max) {
-//       max = arr[i];
-//     }
-//   }
-//   console.log(max, "max");
+//NACI NAJVECI BROJ U NIZU
+  var max;
+  max = arr[0];
+  for (var i = 1; i <= arr.length - 1; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  console.log(max, "max");
 
     
     

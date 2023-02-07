@@ -79,12 +79,14 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 //zamena brojeva
-// var num = 3432;
-// function replacementNum(){
-//     return num.toString().split("").reverse().join("")
-// }
-// replacementNum()
-// console.log(replacementNum())
+
+//reverse-okrece niz
+var num = 3432;
+function replacementNum(){
+    return num.toString().split("").reverse().join("")           //radi
+}
+replacementNum()
+console.log(replacementNum())
 
 /////////////////////////////////////////////////////////////////////////////////
 //prvo slovo veliko
@@ -144,19 +146,19 @@
 
 //////////////////////////////////////////////////////////
 
-var randomNum = Math.floor(Math.random * 10 + 1);
-var guesses = 0;
-document.getElementById("guessBtn").addEventListener("click", function () {
-  var inputNum = document.getElementById("guessInp").value;
-  guesses += 1;
-  if (inputNum == randomNum) {
-    alert("Pogodili ste broj!");
-  } else if (inputNum < randomNum) {
-    alert("Manji je od tvog broja");
-  } else {
-    alert("Veci je od tvog broja");
-  }
-});
+// var randomNum = Math.floor(Math.random * 10 + 1);
+// var guesses = 0;
+// document.getElementById("guessBtn").addEventListener("click", function () {
+//   var inputNum = document.getElementById("guessInp").value;
+//   guesses += 1;
+//   if (inputNum == randomNum) {
+//     alert("Pogodili ste broj!");
+//   } else if (inputNum < randomNum) {
+//     alert("Manji je od tvog broja");
+//   } else {
+//     alert("Veci je od tvog broja");
+//   }
+// });
 
 ///////////////////////////////////////////////////////////////////
 //  document.getElementById("result").addEventListener("click",function(){
@@ -189,75 +191,85 @@ document.getElementById("guessBtn").addEventListener("click", function () {
 
 //////////////////////////////////////////////////////////////////////////
 
-const students = [
-  {
-    ime: "Sara",
-    prezime: "Mecinovic",
-    ocene: [6, 8, 9, 9, 10],
-    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
-  },
-  {
-    ime: "Daris",
-    prezime: "Mecinovic",
-    ocene: [6, 6, 7, 9, 10],
-    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
-  },
-  {
-    ime: "Amina",
-    prezime: "Mecinovic",
-    ocene: [8, 6, 9, 9, 10],
-    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
-  },
-  {
-    ime: "Faris",
-    prezime: "Mecinovic",
-    ocene: [9, 8, 9, 9, 10],
-    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
-  },
-  {
-    ime: "Albin",
-    prezime: "Mecinovic",
-    ocene: [10, 10, 10, 9, 10],
-    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
-  },
-  {
-    ime: "Sana",
-    prezime: "Mecinovic",
-    ocene: [9, 8, 9, 6, 8],
-    predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
-  },
-];
+// const students = [
+//   {
+//     ime: "Sara",
+//     prezime: "Mecinovic",
+//     ocene: [6, 8, 9, 9, 10],
+//     predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+//   },
+//   {
+//     ime: "Daris",
+//     prezime: "Mecinovic",
+//     ocene: [6, 6, 7, 9, 10],
+//     predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+//   },
+//   {
+//     ime: "Amina",
+//     prezime: "Mecinovic",
+//     ocene: [8, 6, 9, 9, 10],
+//     predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+//   },
+//   {
+//     ime: "Faris",
+//     prezime: "Mecinovic",
+//     ocene: [9, 8, 9, 9, 10],
+//     predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+//   },
+//   {
+//     ime: "Albin",
+//     prezime: "Mecinovic",
+//     ocene: [10, 10, 10, 9, 10],
+//     predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+//   },
+//   {
+//     ime: "Sana",
+//     prezime: "Mecinovic",
+//     ocene: [9, 8, 9, 6, 8],
+//     predmeti: ["Matematika", "Fizika", "Engleski", "Biologija", "Informatika"],
+//   },
+// ];
  
 
-//map-da uredi vec postojeci niz(dodali prosek) i vrati novi taj niz
-const studentiSaProsekom = students.map((student) => {
-  return {
-    ...student, //kopira sve podatke sa 3 tacke
-    prosek:
-      student.ocene.reduce((prev, curr) => prev + curr, 0) /  student.ocene.length,
-  };
-})
+// //map-da uredi vec postojeci niz(dodali prosek) i vrati novi taj niz
+// const studentiSaProsekom = students.map((student) => {
+//   return {
+//     ...student, //kopira sve podatke sa 3 tacke
+//     prosek:
+//       student.ocene.reduce((prev, curr) => prev + curr, 0) /  student.ocene.length,
+//   };
+// })
 
-const filtredStudents = studentiSaProsekom.filter(function (item, index) {
-  return item.prosek > 8;
-});
+// const filtredStudents = studentiSaProsekom.filter(function (item, index) {
+//   return item.prosek > 8;
+// });
 
-console.log(studentiSaProsekom ,"Svi proseci");
-console.log(filtredStudents, "filtriran prosek ");
+// console.log(studentiSaProsekom ,"Svi proseci");
+// console.log(filtredStudents, "filtriran prosek ");
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
-const person={
-  name: "Sara",
-  lastName: "Mecinovic",
-  fullName: function(){
-    return this.name + this.lastName;
-  },
-  adress:{
-    city: "Novi pazar",
+// const person={
+//   name: "Sara",
+//   lastName: "Mecinovic",
+//   fullName: function(){
+//     return this.name + this.lastName;
+//   },
+//   adress:{
+//     city: "Novi pazar",
 
-  }
+//   }
 
 
-//funk- da vrati nadimak prva dva slova imena i prezime a  }
+//funk- da vrati nadimak prva dva slova imena i prezime a
+
+/////////////////////////////////////
+
+ const nameByAlfa=(ime)=>{
+                                      //tacno
+   return ime.split("").sort().join("");
+ }
+ console.log(nameByAlfa("webmaster"));
+
+ //////////////////////////////////////

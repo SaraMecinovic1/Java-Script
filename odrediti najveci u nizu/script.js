@@ -23,5 +23,3 @@ najveci(arr);
 // console.log(max);
 
 
-1. brojac++ sta je 
-2. 
