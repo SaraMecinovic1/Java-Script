@@ -81,3 +81,4 @@ console.log( "Pre ubrzanja", MojAuto.trenutnabrzina)
 console.log( "Posle ubrzanja", MojAuto.ubrzanje())
 
 //da kreiramo objekte 
+//broj vrati,da l je motor startovan ili nije,upkljucuje i iskljucuje motor(menjaju taj property),ubrzanje,break,proveru akselerajt ukoliko motor nije startovan
