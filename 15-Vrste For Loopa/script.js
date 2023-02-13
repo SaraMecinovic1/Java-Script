@@ -46,42 +46,42 @@ console.log(pozitivnih,negativnih);
 
 //////////////////////////////////////////////////////////////////////////////////
 
-// arr = [1, 2, 3, 4, 5, 6, 7, 8];
-// function findMin(arr,toReturn){
-//   minValue = arr[0];
-//   minIndex=0;
-//   for(var i = 0;i<=arr.length;i++){
-//     if(arr[i]< min){
-//      var minValue = arr[i];
-//      var minIndex = arr[i];
-//     }
-//     if(toReturn === "index"){
-//       return minIndex
-//     }else if(toReturn === "value"){
-//       return minValue
-//     }
-// }
+arr = [1, 2, 3, 4, 5, 6, 7, 8];
+function findMin(arr,toReturn){
+  minValue = arr[0];
+  minIndex=0;
+  for(var i = 0;i<=arr.length;i++){
+    if(arr[i]< min){
+     var minValue = arr[i];
+     var minIndex = arr[i];
+    }
+    if(toReturn === "index"){
+      return minIndex
+    }else if(toReturn === "value"){
+      return minValue
+    }
+}
 
-///////////////
+/////////////
 
-// arr = [1, 2, 3, 4, 5, 6, 7, 8];
-// minValue = arr[0];
-// minIndex=0;
+arr = [1, 2, 3, 4, 5, 6, 7, 8];
+minValue = arr[0];
+minIndex=0;
 
-// arr.forEach(function(item,index){
-// if(item < minValue){
-// minValue = item
-// minIndex = index
-// }
-// if(toReturn === "index"){
-//   return minIndex
-// }else if(toReturn === "value"){
-//   return minValue
-// }
-// });
-// console.log(minIndex,minValue);
+arr.forEach(function(item,index){
+if(item < minValue){
+minValue = item
+minIndex = index
+}
+if(toReturn === "index"){
+  return minIndex
+}else if(toReturn === "value"){
+  return minValue
+}
+});
+console.log(minIndex,minValue);
 
 
-///////////////////////////////////////////////
+/////////////////////////////////////////////
 
-//mapiranje:
+

@@ -38,7 +38,7 @@ function checkExam(correctAnswers, studentAnswers) {
 }
 //////////////////////////////////////////////////////////////////
 
-arr = [1,2,3,4,5,6]
+array = [1,2,3,4,5,6]
 function isSortedAndHow(array) {
     // "ascending" - rastuce, "descending" - opadajuce, "no" - nije sortiran
     var typeOfSort;
