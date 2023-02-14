@@ -65,18 +65,18 @@ wave = (arr) => {
 // console.log(wave(["hello"])); //
 
 ////////////////////////////////////////////////////////////////
-
-reverseStrings = (arr) => {
-  arr.split("");
-  for (let i = 0; i <= arr.length - 1; i++) {
-    if (arr[i] % 2 === 0) {
-      return arr[i].split(" ").reverse().join("");
+let string = "My name is Sara";
+reverseStrings = (str) => {
+  const array = str.split(" ");
+  for (let i = 0; i < array.length; i++) {
+    if (i % 2 !== 0) {
+      array[i] = array[i].split("").reverse().join("");
     }
-    
   }
- 
+
+  return array.join(" ");
 };
-console.log(reverseStrings("My name is Sara")); //
+console.log(reverseStrings(string)); //
 
 //////////////////////////////////////////////////////////////////
 
@@ -113,4 +113,83 @@ answers = (correctAnswers, studentAnswers) => {
 
 answers(correctAnswers, studentAnswers);
 
-// console.log(answers())
+// console.log(answers(correctAnswers, studentAnswers))
+
+/////////////////////////////////////////////////////////////////////////
+
+let arr = [4, 6, 8, 10];
+
+isItSorted = (arr) => {
+  let typOfSort;
+  if (arr[0] < arr[1]) {
+    typOfSort === "rastuce";
+  } else if (arr[0] > arr[1]) {
+    typOfSort === "opadajuce";
+  } else {
+    typOfSort === "no";
+    return typOfSort;
+  }
+
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (typOfSort === "rastuce" && arr[i - 1] > arr[i]) {
+      typOfSort = "no";
+      break;
+    }
+    if (typOfSort === "opadajuce" && arr[i - 1] < arr[i]) {
+      typOfSort = "no";
+      break;
+    }
+  }
+  return typOfSort;
+};
+isItSorted(arr)
+console.log(isItSorted(arr));
+
+///////////////////////////////////////////////////////////////////////////////
+
+smallEnought=(arr,limit)=>{
+for(let i=0;i<=arr.length-1;i++){
+  if(arr[i] <= limit){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+}
+console.log(smallEnought([201],200)) //moj radi
+
+/////////////////////////////////////////////////////////////////////////////////
+
+letterofArr=(str)=>{
+const letter= str.split("");
+ let upLetter= []
+for(let i = 0;i<=letter.length-1;i++){
+  if(letter[i] === letter[i].toUpperCase()){
+    upLetter.push(i)
+    
+  }
+}
+return upLetter
+}
+
+console.log(letterofArr("CodEWaRs"))  //moj radi
+
+//////////////////////////////////////////////////////////////////////////////////
+
+count=(arr)=>{
+  counPos=0
+  countNeg=0;
+  for(let i = 0;i<=arr.length-1;i++){
+    if (arr[i] > 0) {                            // saberi pozitivne i negativne odvojeno //
+      counPos++;
+    } else if (arr[i] < 0) {
+      countNeg += arr[i];
+    }
+  }
+  return[counPos,countNeg]
+}
+console.log(count([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])) 
+
+/////////////////////////////////////////////////////////////////////////////////////
+
