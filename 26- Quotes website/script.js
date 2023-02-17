@@ -45,19 +45,19 @@ const renderQuotes = () => {
 
     like.src = "heart.png";
     like.style = "width:20px";
-    like.onclick = function () {
+    like.onclick = () => {
       likeQuote(item._id); //OVO!!!
     };
 
     editEl.src = "edit.png";
     editEl.style = "width: 20px";
-    editEl.onclick = function () {
+    editEl.onclick = () => {
       window.location.href = "edit.html?quoteId=" + item._id; //sta znaci upitnik i ovo dalje
     };
 
     deleteEl.src = "remove.png";
     deleteEl.style = "width: 20px";
-    deleteEl.onclick = function () {
+    deleteEl.onclick = () => {
       deleteQuote(item._id);
     };
     child.appendChild(quoteTextEl);
@@ -102,3 +102,13 @@ document.getElementById("inp1").addEventListener("keydown", function () {
   });
   renderQuotes();
 });
+
+document.getElementById("rastuce").addEventListener("click", () => {
+  allQuotes.sort((a, b) => a.likes - b.likes);
+  renderQuotes();
+});
+
+document.getElementById("opadajuce").onclick = () => {
+  allQuotes.sort((a, b) => b.likes - a.likes);
+  renderQuotes();
+};

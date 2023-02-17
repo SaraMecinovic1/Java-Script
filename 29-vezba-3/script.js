@@ -76,7 +76,7 @@ reverseStrings = (str) => {
 
   return array.join(" ");
 };
-console.log(reverseStrings(string)); //
+// console.log(reverseStrings(string)); //
 
 //////////////////////////////////////////////////////////////////
 
@@ -142,54 +142,64 @@ isItSorted = (arr) => {
   }
   return typOfSort;
 };
-isItSorted(arr)
-console.log(isItSorted(arr));
+isItSorted(arr);
+// console.log(isItSorted(arr));
 
 ///////////////////////////////////////////////////////////////////////////////
 
-smallEnought=(arr,limit)=>{
-for(let i=0;i<=arr.length-1;i++){
-  if(arr[i] <= limit){
-    return true;
-  }else{
-    return false;
+smallEnought = (arr, limit) => {
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (arr[i] <= limit) {
+      return true;
+    } else {
+      return false;
+    }
   }
-}
-
-}
-console.log(smallEnought([201],200)) //moj radi
+};
+// console.log(smallEnought([201],200)) //moj radi
 
 /////////////////////////////////////////////////////////////////////////////////
 
-letterofArr=(str)=>{
-const letter= str.split("");
- let upLetter= []
-for(let i = 0;i<=letter.length-1;i++){
-  if(letter[i] === letter[i].toUpperCase()){
-    upLetter.push(i)
-    
+letterofArr = (str) => {
+  const letter = str.split("");
+  let upLetter = [];
+  for (let i = 0; i <= letter.length - 1; i++) {
+    if (letter[i] === letter[i].toUpperCase()) {
+      upLetter.push(i);
+    }
   }
-}
-return upLetter
-}
+  return upLetter;
+};
 
-console.log(letterofArr("CodEWaRs"))  //moj radi
+// console.log(letterofArr("CodEWaRs"))  //moj radi
 
 //////////////////////////////////////////////////////////////////////////////////
 
-count=(arr)=>{
-  counPos=0
-  countNeg=0;
-  for(let i = 0;i<=arr.length-1;i++){
-    if (arr[i] > 0) {                            // saberi pozitivne i negativne odvojeno //
+count = (arr) => {
+  counPos = 0;
+  countNeg = 0;
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (arr[i] > 0) {
+      // saberi pozitivne i negativne odvojeno //
       counPos++;
     } else if (arr[i] < 0) {
       countNeg += arr[i];
     }
   }
-  return[counPos,countNeg]
-}
-console.log(count([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])) 
+  return [counPos, countNeg];
+};
+// console.log(count([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
 
 /////////////////////////////////////////////////////////////////////////////////////
 
+// numbers = [1, 3, 4, 2, 5];
+const highAndLow = (numbers) => {
+  for (let i = 0; i <= numbers.length - 1; i++) {
+    numbers.sort((a, b) => b- a);
+  }
+  return [numbers[0],numbers[numbers.length-1]];
+  
+};
+console.log(highAndLow([1, 3, 4, 2, 5])); //moj
+
+/////////////////////////////////////////////////////////////////////////////////////

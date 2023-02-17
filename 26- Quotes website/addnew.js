@@ -9,44 +9,44 @@ document.getElementById("addnew").addEventListener("click", function () {
   const text = document.getElementById("quoteText").value;
   const author = document.getElementById("quoteAuthor").value;
   const source = document.getElementById("quoteSource").value;
-  const type = document.getElementById("type").value;
+  // const type = document.getElementById("type").value;
 
   const newQuote = {
     quoteText: text,
     quoteAuthor: author,
     quoteSource: source,
-    type: type,
+    // type: type,
   };
 
-  const getType = () => {
-    fetch("https://js-course-server.onrender.com/category/get-all")
-      .then((response) => response.json())
+  // const getType = () => {
+  //   fetch("https://js-course-server.onrender.com/category/get-all")
+  //     .then((response) => response.json())
 
-      .then((response) => {
-        console.log(response);
-        renderType();
-      })
-      .catch((err) => {
-        console.log("err", err);
-      });
-  };
-  getType();
+  //     .then((response) => {
+  //       console.log(response);
+  //       renderType();
+  //     })
+  //     .catch((err) => {
+  //       console.log("err", err);
+  //     });
+  // };
+  // getType();
 
-  const renderType = () => {
-    let parent = document.getElementById("type").value;
-    parent.innerHTML = " ";
-    let sortType = getType();
-    sortType.forEach = (item, index) => {
-      child = document.createElement("option");
-      typeOfT = document.createElement("option");
+  // const renderType = () => {
+  //   let parent = document.getElementById("type").value;
+  //   parent.innerHTML = " ";
+  //   let sortType = getType();
+  //   sortType.forEach = (item, index) => {
+  //     child = document.createElement("option");
+  //     typeOfT = document.createElement("option");
 
-      typeOfT.textContent= item.sortType;
+  //     typeOfT.textContent= item.sortType;
 
-      child.appendChild(typeOfT);
+  //     // child.appendChild(typeOfT);
 
-      parent.appendChild(child);
-    };
-  };
+  //     parent.appendChild(child);
+  //   };
+  // };
 
   //   async function getType() {
   //     let url = "https://js-course-server.onrender.com/category/get-all";
@@ -102,8 +102,7 @@ document.getElementById("addnew").addEventListener("click", function () {
 
   //////////////
 
-  document.getElementById("poruka").innerHTML =
-    "Go to the page: http://127.0.0.1:5500/26-%20Quotes%20website/index.html  to view all quotes!";
+  
 });
 
 // localStorage.setItem("name", "Sara")

@@ -4,26 +4,59 @@
   }
    */
 
+   #rastuce{
+    width: 200px;
+    height: 40px;
+    margin-left: 80px;
+    background-color: pink;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-top: 40px;
+   }
+
+   #opadajuce{
+    width: 200px;
+    height: 40px;
+    margin-left: 80px;
+    background-color: pink;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-right: 80px;
+    margin-top: 40px;
+   }
+   .pocetna{
+    width: 100%;
+    height: 190vh; 
+    align-items: center;
+    justify-content: center;
+}
    body{
-    background-color: rgb(212, 175, 55);
-    
+    background-image: -moz-linear-gradient(rgb(241, 135, 152),rgb(255, 255, 255));
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: center;
     justify-content: center;
    }
   .list {
-    display: block;
+    /* display: block;
     margin-top: 30px;
     margin-left: 300px;
     flex-direction: column;
     width: 0%;
     height: 90vh;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    width: 600px;
+    height: 90vh;
+text-align: center;
+margin-top: 40px;
+margin-left: 290px;
+
     /* overflow: auto; */
   }
   
   .list li {
-    display: block;
+    /* display: block;
     height: 130px;
     width: 600px;
     list-style-type: none;
@@ -33,31 +66,43 @@
     padding-top: 5px;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
+    font-size: large; */
+
+    border: 2px solid  rgb(253, 210, 218);
+    display: block;
+   
+    height: 100px;
+    width: 600px;
+    list-style-type: none;
+    background-color: rgb(219, 216, 216);
+    margin-bottom: 20px;
+    text-align: center;
+    
+    color:rgb(238, 159, 159);
+    font-size: 20px;
+  }
+
+  .search{
+    display: flex;
+    justify-content: space-between;
   }
   #inp1{
-width: 300px;
+
+margin-top: 40px;
+width: 450px;
+margin-left: 80px;
 height: 50px;
-border: 3px solid rgb(18, 55, 18);
-border-radius: 7px;
-background-color: gainsboro;
-font-size: 18px;
-padding-left: 10px;
+border: 2px solid rgb(252, 224, 229);
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+padding-left: 20px;
+font-size: 20px;
+align-items: center;
+justify-content: center;
+display: flex;
 
   }
-.pocetna{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-  /* #inp1{
-    width: 300px;
-    height: 50px;
-    margin-left: 0px;
-    border-radius:none;
-    border: 3px solid rgb(18, 55, 18);
-    background-color: gainsboro;
-    color: gray;
-  } */
+
+  
   
