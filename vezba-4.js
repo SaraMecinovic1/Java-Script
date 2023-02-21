@@ -100,4 +100,4 @@ if (meci >= dragon * 2) {
     return true
   }
  }
- console.log(dragons((,40)));
+ console.log(dragons((1,40)));

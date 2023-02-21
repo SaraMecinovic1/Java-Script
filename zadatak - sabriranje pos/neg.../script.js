@@ -59,3 +59,4 @@ function countNegative(arr){
   return suma;
 }
 console.log(countNegative(arr));
+/////////////////////////////////////
