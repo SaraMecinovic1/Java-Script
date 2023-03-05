@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="full-screen-container">
-    <div class="login-container">
-      <h1 class="login-title">Welcome</h1>
-      <form class="form">
-        <div class="input-group ">
-          <label id="emailLabel" for="email">Email</label>
-          <input type="email" name="email" id="email">
-          
-        </div>
+      <div class="login-container">
+        <h1 class="login-title" id="title">Welcome</h1>
 
-        <div class="input-group ">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password">
+        <form class="form" id="form">
           
-        </div>
+          <div class="input-group">
+            <label id="emailLabel" for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
 
-        <button type="submit" class="login-button">Login</button>
-      </form>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
+
+          <!-- <button type="submit" class="login-button"><a href="./quiz.html">LOGIN</a></button> -->
+          <button class="login-button" id="loginButt">LOGIN</button>
+        </form>
+      </div>
     </div>
-  </div>
-   
-    
-</body>
+
+    <script src="./script.js"></script>
+  
+  </body>
 </html>
