@@ -27,6 +27,7 @@ document.getElementById("loginButt").addEventListener("click", () => {
       return res.json();
     })
     .then((data) => {
+      console.log(data);
       if (data.userId) {
         localStorage.setItem("auth_token", data.token);
         localStorage.setItem("userId", data.userId);
@@ -35,8 +36,6 @@ document.getElementById("loginButt").addEventListener("click", () => {
       } else {
         alert("Greska!");
         myDiv.style = "display:block";
-       
-        
       }
     });
 });

@@ -29,39 +29,56 @@ const arr = [
   },
 ];
 
-let currentQuestionIndex = 0; //index pitanja krece od 0
+//result prebacim ovde kad zavrdi zadnje pitanje
+
+let currentQuestionIndex = 0; //index pitanja krece od 0,kao "[i]"
 let correctAns = 0; //poeni
-let currQuestion = arr[currentQuestionIndex]; //prvo pitanje od 0 indexa
+
+const bodovi = document.getElementById("bod");
+if (bodovi) {
+  bodovi.textContent = correctAns;
+}
 
 const startQuiz = () => {
-  //ispisali smo pitanje
-
-  let queDiv = document.getElementById("pitanje");
-  queDiv.textContent = currQuestion.question;
-  //ispisali smo odgovore za to pitaje
-  let parent = document.getElementById("odgovori");
-  currQuestion.answers.forEach((odgovor, index) => {
-    console.log(odgovor, "-odgovori");
-    let buttonEl = document.createElement("button");
-    buttonEl.textContent = odgovor;
-    buttonEl.classList.add("B");
-    parent.appendChild(buttonEl);
-  });
-
   if (currentQuestionIndex >= arr.length) {
-    return (window.location.href = "result.html");
-  }
-};
-startQuiz();
+  divPitanja= document.getElementById("pitanja")
+  divPitanja.style = "display:block";
 
-const submitAnswer = (id, ans) => {
-  if (currQuestion.id === id) {
-    console.log(currQuestion.id);
-    if (currQuestion.correct === ans) {
-      correctAns += 1;
-      alert("radi");
+  }
+
+  let currQuestion = arr[currentQuestionIndex]; //prvo pitanje iz niza od 0 indexa
+  console.log("Brojac", currentQuestionIndex);
+
+  //ispisali smo pitanje
+  let queDiv = document.getElementById("pitanje");  //mesto gde cemo da ispisemo pitanje
+  queDiv.textContent = currQuestion.question; //pitanje
+
+  //ispisali smo odgovore za to pitaje
+  let parent = document.getElementById("odgovori");  //mesto za odgovore(div)
+  currQuestion.answers.forEach((odgovor, index) => {  //prolazimo loopom kroz sva pitanja naseg niza[i]
+    let buttonEl = document.createElement("button");  //kreiramo child(gde ce da budu nasi odgovori pojedinacno)
+    buttonEl.textContent = odgovor;   //sta ce da pise na buttonu(odgovor ==>kao arr[i] ili item,svaki odgovor posebno)
+    buttonEl.classList.add("B");    //dodeljujemo klasu iz css tim buttonima
+    parent.appendChild(buttonEl);  //u mesto gde ce da stoje odgovori(buttoni) ih ubacujem
+    buttonEl.onclick = () => {  //da buttoni budu klikabilni 
+      submitAnswer(currQuestion.id, buttonEl.textContent); // funk koja prima id i ans (valjda)
+    };
+  });
+};
+
+const submitAnswer = (id, ans) => {   //id-currQuestion.id , ans - (VALJDA) buttonEl.textContent
+  let currQuestion = arr[currentQuestionIndex]; //prvo pitanje od 0 indexa
+  console.log(currQuestion)
+
+  if (currQuestion.id === id) {  //da li se id pitanja poklapa sa tr id?
+    if (currQuestion.correct === ans) { //da li je tacan odgovor iz obj = naseg odgovoru
+      correctAns += currQuestion.points ; //ako jeste tacan dodajemo ovoj varijabli brojacu poene iz obj
     }
-    currentQuestionIndex++;
-    startQuiz();
+    currentQuestionIndex++; //ako se id poklapa,prebaci me na sledece pitanje
+    let parent = document.getElementById("odgovori");
+    parent.innerHTML = "";   //ovo dvoje sluzi da bi nam ocistili prosle odgovore pitanja,ako nema ovog pitanja se nagomilavaju
+    startQuiz();  //da nam ispise ponovo odgovore i pitanje
   }
 };
+
+startQuiz();
