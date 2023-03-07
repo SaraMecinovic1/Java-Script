@@ -8,12 +8,13 @@ document.getElementById("loginButt").addEventListener("click", () => {
   };
 
   let myDiv = document.getElementById("form");
-  myDiv.style = "display:none";
+  
   // let title = document.getElementById("title");
   // title.style = "display:block";
 
   if (!email.includes("@") || password.length < 6 || password.length > 20) {
-    alert("Proverite sifru ili email");
+    myDiv.style = "display:none";
+    // alert("Proverite sifru ili email");
   }
 
   fetch("https://js-course-server.onrender.com/user/login", {
@@ -34,7 +35,7 @@ document.getElementById("loginButt").addEventListener("click", () => {
         alert("Prijava uspesna!");
         window.location.href = "quiz.html";
       } else {
-        alert("Greska!");
+        // alert("Greska!");
         myDiv.style = "display:block";
       }
     });

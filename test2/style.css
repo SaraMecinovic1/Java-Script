@@ -118,7 +118,7 @@ background-image: url(./page1.jpg);
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     margin-left: 50px;
-    display: flex;
+    display: block;
     flex-direction: column;
     margin-top: 130px;
     
@@ -177,11 +177,11 @@ border: 2px solid rgb(192, 190, 190);
    
 justify-content: center;
 opacity: 0.7; 
-width: 100%;
+
 color: white;
 display: flex;
-background-image: url(./page1.jpg);
- height: 100vh;
+
+ 
     background-size: cover;  
     background-position: center;
 
@@ -189,6 +189,7 @@ background-image: url(./page1.jpg);
 .rezultati{
     width: 500px;
     height: 230px;
+    justify-content: center;
     border-radius: 20px;
     background-color: rgb(221, 221, 221);
     margin-top: 120px;
