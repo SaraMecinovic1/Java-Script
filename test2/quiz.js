@@ -7,6 +7,13 @@ const arr = [
     correct: "koza",
   },
   {
+    id: "987001",
+    question: "Koliko dugo traje fudbalska utakmica?",
+    answers: [70, 90, 45, 60],
+    points: 5,
+    correct: 90,
+  },
+  {
     id: "23541",
     question: "Koji je glavni grad Srbije?",
     answers: ["Novi Sad", "Beograd", "Subotica", "Novi Pazar"],
@@ -14,33 +21,32 @@ const arr = [
     correct: "Beograd",
   },
   {
-    id: "987001",
-    question: "Koliko dugo traje fudbalska utakmica?",
-    answers: [90, 70, 45, 60],
-    points: 5,
-    correct: 90,
-  },
-  {
     id: "89776",
     question: "Koliko ima minut sekundi?",
-    answers: [90, 70, 45, 60],
+    answers: [90, 45, 70, 60],
     points: 5,
     correct: 60,
   },
+  {
+    id: "8888",
+    question: " Koliko okeana ima na svetu?",
+    answers: [5, 8, 4, 6],
+    points: 5,
+    correct: 5,
+  },
 ];
 
-let currentQuestionIndex = 0; //index pitanja krece od 0,kao "[i]"
+let currentQuestionIndex = 0; //index pitanja krece od 0,kao "[i]"  //brojac
 let correctAns = 0; //poeni
-const resultView = document.getElementById("page3");
+const resultView = document.getElementById("page3"); //prikaz rezultata
 
 const startQuiz = () => {
-  resultView.style.display = "none";
+  resultView.style.display = "none"; // da se ne vidi dok su ima pitanja
 
   if (currentQuestionIndex >= arr.length) {
     divPitanja = document.getElementById("pitanja");
-    divPitanja.style.display = "none";
-    // divPitanja.style = "display:none";
-    displayResult();
+    divPitanja.style.display = "none"; //kada nema vise pitanja da nam sakrije div sa pitanjem
+    displayResult(); //i da se desi ova funk
   }
 
   let currQuestion = arr[currentQuestionIndex]; //prvo pitanje iz niza od 0 indexa
@@ -60,13 +66,13 @@ const startQuiz = () => {
     parent.appendChild(buttonEl); //u mesto gde ce da stoje odgovori(buttoni) ih ubacujem
     buttonEl.onclick = () => {
       //da buttoni budu klikabilni
-      submitAnswer(currQuestion.id, buttonEl.textContent); // funk koja prima id i ans (valjda)
+      submitAnswer(currQuestion.id, buttonEl.textContent); // funk koja prima id i ans
     };
   });
 };
 
 const submitAnswer = (id, ans) => {
-  //id-currQuestion.id , ans - (VALJDA) buttonEl.textContent
+  //id- currQuestion.id , ans - buttonEl.textContent
   let currQuestion = arr[currentQuestionIndex]; //prvo pitanje od 0 indexa
 
   console.log(currQuestion.correct, ans);
@@ -87,10 +93,10 @@ const submitAnswer = (id, ans) => {
 startQuiz();
 
 const displayResult = () => {
-  const resultView = document.getElementById("page3");
-  const bodovi = document.getElementById("bod");
-  bodovi.textContent = correctAns;
-  resultView.style.display = "block";
+  const resultView = document.getElementById("page3");  //mesto za prikaz rezultata
+  const bodovi = document.getElementById("bod");  //mesto za bodove
+  bodovi.textContent = correctAns + " / 25";  //da nam ispise bodove
+  resultView.style.display = "block";  //da nam prikaze sad div koji smo na pocetak sakrili
   resultView.style.marginTop = "-600px";
   resultView.style.marginLeft = "400px";
 };

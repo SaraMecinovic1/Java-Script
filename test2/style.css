@@ -24,6 +24,8 @@
   box-shadow: 0 0 15px 0 rgb(16, 33, 56);
   padding: 40px 10px;
   width: 80%;
+  justify-content: center;
+  align-items: center;
   max-width: 500px;
   border-radius: 20px;
 }
@@ -77,7 +79,7 @@
   .login-button {
    width: 300px;
    padding: 5px 10px;
-   margin-left:90px;
+   margin-left:100px;
    text-align: center;
     font-size: 19px;
     font-weight: lighter;
@@ -230,3 +232,8 @@ display: flex;
 #playAgain:active{
     color: black;
 }
+/* #gifDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */

@@ -1,3 +1,15 @@
+document.getElementById("gifDiv").style = "display: none; ";
+
+const spiner = () => {
+  document.getElementById("gifDiv").style =
+    "display: flex; justify-content: center; align-items:center;";
+  document.getElementById("form").style = "display: none;";
+};
+const stopSpiner = () => {
+  document.getElementById("gifDiv").style = "display: none; ";
+  document.getElementById("form").style = "display: flex;";
+};
+
 document.getElementById("loginButt").addEventListener("click", () => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
@@ -7,13 +19,9 @@ document.getElementById("loginButt").addEventListener("click", () => {
     password: password,
   };
 
-  let myDiv = document.getElementById("form");
-  
-  // let title = document.getElementById("title");
-  // title.style = "display:block";
-
   if (!email.includes("@") || password.length < 6 || password.length > 20) {
-    myDiv.style = "display:none";
+    spiner();
+
     // alert("Proverite sifru ili email");
   }
 
@@ -29,14 +37,16 @@ document.getElementById("loginButt").addEventListener("click", () => {
     })
     .then((data) => {
       console.log(data);
+      const urlParams = new URLSearchParams(window.location.search);
       if (data.userId) {
         localStorage.setItem("auth_token", data.token);
         localStorage.setItem("userId", data.userId);
         alert("Prijava uspesna!");
+
         window.location.href = "quiz.html";
       } else {
         // alert("Greska!");
-        myDiv.style = "display:block";
+        stopSpiner();
       }
     });
 });
