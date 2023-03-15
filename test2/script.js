@@ -10,6 +10,8 @@ const stopSpiner = () => {
   document.getElementById("form").style = "display: flex;";
 };
 
+////////
+
 document.getElementById("loginButt").addEventListener("click", () => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
@@ -37,17 +39,14 @@ document.getElementById("loginButt").addEventListener("click", () => {
     })
     .then((data) => {
       console.log(data);
-      const urlParams = new URLSearchParams(window.location.search);
       if (data.userId) {
         localStorage.setItem("auth_token", data.token);
         localStorage.setItem("userId", data.userId);
         alert("Prijava uspesna!");
-
         window.location.href = "quiz.html";
       } else {
         // alert("Greska!");
-        stopSpiner();
+        spiner();
       }
     });
 });
-console.log();

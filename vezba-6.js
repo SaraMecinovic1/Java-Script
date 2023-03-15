@@ -216,3 +216,16 @@ const reverseSeq = n => {
       arr.push(i);
       } return arr;
   };
+
+  //////////////// da ispise od 1 do n brojs
+  function monkeyCount(n) {
+    let sum=[]
+    for(let i=1;i<=n;i++){
+      sum.push(i)
+    }
+    return sum
+    
+    
+  }
+
+  

@@ -1,31 +1,31 @@
 const arr = [
   {
     id: "89776",
-    question: "Koji je najveci organ u ljudskom telu?",
-    answers: ["bubreg", "koza", "mozak", " pluca"],
+    question: "Svetlosna godina je jedinica za merenje cega?",
+    answers: ["brzine", "vremena", "ubrzanja", " rastojanja"],
     points: 5,
-    correct: "koza",
+    correct: "rastojanja",
   },
   {
     id: "987001",
-    question: "Koliko dugo traje fudbalska utakmica?",
-    answers: [70, 90, 45, 60],
+    question: "Četiri bajta se sastoji od?",
+    answers:["13 bitova ", "128 bitova", "32 bita", "16 bitova"],
     points: 5,
-    correct: 90,
+    correct: "32 bita",
   },
   {
     id: "23541",
-    question: "Koji je glavni grad Srbije?",
-    answers: ["Novi Sad", "Beograd", "Subotica", "Novi Pazar"],
+    question: "Poznata staza za trke Formule 1 u Italiji nalazi se u kojem gradu?",
+    answers: ["Monaco", "Palermo", "Bari", "Nica"],
     points: 5,
-    correct: "Beograd",
+    correct: "Monaco",
   },
   {
     id: "89776",
-    question: "Koliko ima minut sekundi?",
-    answers: [90, 45, 70, 60],
+    question: "Kog hemijskog elementa ima najviše u sastavu Sunca?",
+    answers: ["kiseonika", "vodoika", "azota", "vodonika"],
     points: 5,
-    correct: 60,
+    correct: "vodonika",
   },
   {
     id: "8888",
@@ -41,7 +41,7 @@ let correctAns = 0; //poeni
 const resultView = document.getElementById("page3"); //prikaz rezultata
 
 const startQuiz = () => {
-  resultView.style.display = "none"; // da se ne vidi dok su ima pitanja
+  resultView.style.display = "none"; // da se ne vidi dok ima pitanja
 
   if (currentQuestionIndex >= arr.length) {
     divPitanja = document.getElementById("pitanja");
@@ -49,7 +49,7 @@ const startQuiz = () => {
     displayResult(); //i da se desi ova funk
   }
 
-  let currQuestion = arr[currentQuestionIndex]; //prvo pitanje iz niza od 0 indexa
+  let currQuestion = arr[currentQuestionIndex]; //prvo pitanje iz niza od 0 indexa ,(kao arr[i])
   console.log("Brojac", currentQuestionIndex);
 
   //ispisali smo pitanje
@@ -84,7 +84,7 @@ const submitAnswer = (id, ans) => {
     }
     currentQuestionIndex++; //ako se id poklapa,prebaci me na sledece pitanje
     let parent = document.getElementById("odgovori");
-    parent.innerHTML = ""; //ovo dvoje sluzi da bi nam ocistili prosle odgovore pitanja,ako nema ovog pitanja se nagomilavaju
+    parent.innerHTML = ""; //ovo dvoje sluzi da bi nam ocistili prosle odgovore pitanja,ako nema ovog -pitanja se nagomilavaju
 
     startQuiz(); //da nam ispise ponovo odgovore i pitanje
   }
@@ -92,10 +92,15 @@ const submitAnswer = (id, ans) => {
 
 startQuiz();
 
+ const totalPoints= arr.reduce((prev,curr)=>{
+  return prev + curr.points
+ },0)
+ console.log(totalPoints)
+
 const displayResult = () => {
   const resultView = document.getElementById("page3");  //mesto za prikaz rezultata
   const bodovi = document.getElementById("bod");  //mesto za bodove
-  bodovi.textContent = correctAns + " / 25";  //da nam ispise bodove
+  bodovi.textContent = correctAns + "/" + totalPoints;  //da nam ispise bodove
   resultView.style.display = "block";  //da nam prikaze sad div koji smo na pocetak sakrili
   resultView.style.marginTop = "-600px";
   resultView.style.marginLeft = "400px";
