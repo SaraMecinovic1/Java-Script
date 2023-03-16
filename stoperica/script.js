@@ -2,12 +2,12 @@ let time = document.getElementById("time");
 let stopButton = document.getElementById("stop");
 let startButton = document.getElementById("start");
 let restButton = document.getElementById("reset");
-let int = null;
+let Interval;
 let seconds = 0;
 let minutes = 0;
 
 const startFunc = () => {
-  //   seconds++; //i tu
+  seconds++; //i tu
   if (seconds === 60) {
     minutes++;
     seconds = 0;
@@ -21,30 +21,44 @@ const startFunc = () => {
   }
   if (minutes < 10) {
     minutesToShow = "0" + minutes;
+    console.log("minuti", minutes);
   }
 
   document.getElementById("sekMin").textContent =
     minutesToShow + " : " + secondsToShow;
 };
 
-document.getElementById("start").addEventListener("click", () => {
-  // setInterval(() => {
-  //   startFunc();
-  //   seconds++; //moze biti i tu
-  // }, 1000);
-  if(int!==null){
-    clearInterval(int);
-}
-int = setInterval(startFunc,10);
-});
+// document.getElementById("start").addEventListener("click", () => {  //radilo
+//   setInterval(() => {
+//     startFunc();
+//     seconds++; //moze biti i tu
+//   }, 1000);
+// });
+startButton.onclick = function () {
+  clearInterval(Interval);
+  Interval = setInterval(startFunc, 100);
+};
 
 document.getElementById("stop").addEventListener("click", () => {
-    clearInterval(int);
+  //   const int = setInterval(() => {
+  //     startFunc();
+  //     seconds++; //moze biti i tu
+  //   }, 1000);
+  //   clearInterval(int);
+
+  clearInterval(Interval); //da stopira interval
 });
 
 document.getElementById("reset").addEventListener("click", () => {
-   
-    minutes = "00";
+  //   minutes = "00";
+  //   seconds = "00";
+  //   minutesToShow = minutes;
+  //   secondsToShow = seconds;
+  //   time.textContent = minutesToShow + " : " + secondsToShow;
+  //   clearInterval(time);
+
+  clearInterval(Interval);
+  minutes = "00";
   seconds = "00";
   minutesToShow = minutes;
   secondsToShow = seconds;
