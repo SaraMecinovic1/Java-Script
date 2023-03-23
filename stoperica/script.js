@@ -65,3 +65,13 @@ document.getElementById("reset").addEventListener("click", () => {
   document.getElementById("sekMin").textContent =
     minutesToShow + " : " + secondsToShow;
 });
+
+
+///
+
+function delay(ms){
+return  new Promise((resolve,reject) =>
+ setTimeout(()=> resolve("tekst"),ms)
+}
+delay(3000).then(res)=> alert(res)
+console.log(delay())
